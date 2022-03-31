@@ -71,6 +71,8 @@ const items = [
   },
 ];
 
+console.log(items.length); //14
+
 // 5.請過濾以下陣列中每項物件之鍵(key)為 "checked", 值(value)為 false 者：
 let resultFive = items.filter((element) => element.checked !== false);
 console.log(resultFive);
@@ -78,8 +80,8 @@ console.log(resultFive);
 // 6.承上題，請將上題之答案為轉換為一陣列中每項只含有鍵(key)為 "number" 的物件(額外)
 let resultSix = items.map((element) => {
   // 目標 => [{number : 0},{...},...{...}]
-  let obj = {};
-  obj.number = element.number;
+  let obj = {}; //創造一個空物件
+  obj.number = element.number; //將組合(key:value)放入物件
   // console.log(obj);
   return obj;
 });
